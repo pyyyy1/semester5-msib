@@ -1,0 +1,112 @@
+<body bgcolor="#E5E8E8">
+	<form name="frmLatihan" method="GET" action="#">
+		<table border="0" align="center" cellpadding="15" width="60%" bgcolor="#90C8AC">
+			<thead>
+				<tr>
+					<th colspan="2">Registrasi Wisata & Registrasi Kuliner</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th colspan="2">
+						<input type="submit" name="proses" value="Kirim" />&nbsp;&nbsp;
+						<input type="reset" name="unproses" value="Batal" />
+					</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td width="25%"><label>Nama</label></td>
+					<td>
+						<input type="text" name="nama" value="" placeholder="Nama Lengkap"
+								size="50" maxlength="100"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Email</label></td>
+					<td>
+						<input type="text" name="email" value="" placeholder="Alamat Email"
+								size="50" maxlength="100"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Alamat</label></td>
+					<td>
+						<input type="text" name="email" value="" placeholder="Alamat"
+								size="50" maxlength="100"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Gender</label></td>
+					<td>
+						<input type="radio" name="gender" value="L"/>Laki-Laki&nbsp;&nbsp;
+						<input type="radio" name="gender" value="P" checked/>Perempuan
+					</td>
+				</tr>
+				<tr>
+					<td valign="top"><label>Hobby</label></td>
+					<td>
+						<input type="checkbox" name="hobby" value="Memasak"/>Memasak<br/>
+						<input type="checkbox" name="hobby" value="Membaca"/>Membaca<br/>
+						<input type="checkbox" name="hobby" value="Menulis"/>Menulis<br/>
+						<input type="checkbox" name="hobby" value="Bernyanyi"/>Bernyanyi<br/>
+						<input type="checkbox" name="hobby" value="Berenang" checked/>Berenang<br/>
+						<input type="checkbox" name="hobby" value="Olahraga"/>Olahraga<br/>
+						<input type="checkbox" name="hobby" value="Traveling"/>Traveling<br/>
+						<input type="checkbox" name="hobby" value="Kuliner"/>Kuliner<br/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Wisata Rekreasi</label></td>
+					<td>
+						<select name="wisata">
+							<option value="">-- Pilih Wisata --</option>
+							<option value="Tebet Ecopark">Tebet Ecopark</option>
+							<option value="TMII">Taman Mini Indonesia Indah</option>
+							<option value="Dufan" selected>Dunia Fantasi</option>
+							<option value="Pantai Ancol">Pantai Ancol</option>
+							<option value="Ocean Samudra">Ocean Samudra</option>
+							<option value="Kota Tua">Kota Tua</option>
+							<option value="Pilihan Lain">Pilihan Lain</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%"><label>Pilihanmu</label></td>
+					<td>
+						<input type="text" name="nama" value="" placeholder="Tuliskan Rekreasi Pilihanmu"
+								size="50" maxlength="100"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Wisata Kuliner</label></td>
+					<td>
+						<select name="Kuliner">
+							<option value="">-- Pilih Kuliner --</option>
+							<option value="Bandar Djakarta">Bandar Djakarta</option>
+							<option value="Kemang Food">Kemang Food Festival</option>
+							<option value="Social House" selected>Social House</option>
+							<option value="Awan Lounge">Awan Lounge</option>
+							<option value="Collete & Lola">Collete & Lola</option>
+							<option value="Boulevard Lounge">Boulevard Lounge</option>
+							<option value="Pilihan Lain">Pilihan Lain</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%"><label>Pilihanmu</label></td>
+					<td>
+						<input type="text" name="nama" value="" placeholder="Tuliskan Kuliner Pilihanmu"
+								size="50" maxlength="100"/>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top"><label>Komentar</label></td>
+					<td>
+						<textarea name="komentar" cols="50" rows="5">Komentar Anda</textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
