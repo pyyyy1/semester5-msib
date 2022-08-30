@@ -1,0 +1,45 @@
+body{
+    background-color: #F49FB6;
+    margin:2cm 3cm 2cm 3cm;
+}
+
+h1, h2{
+    color: #F4D2D2 ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    color: #DD116F;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align:justify
+}
+
+table{
+	border:2px solid #F4D2D2  ;
+}
+
+td{
+	padding:5px;
+	border:1px solid #F4D2D2 ;
+}
+
+fieldset, legend{
+	border:#F4D2D2  solid 2px;	
+}
+
+legend{
+    color:#F4D2D2;
+    padding: 5px;
+    font-size:20pt;
+	text-transform:uppercase;
+}
+
+ul{
+    list-style-image: url("img/nyanyi.gif");
+}
+
+li{
+    list-style-image: url('img/jempol.gif');
+    color:#8F356C  ;
+    text-align: justify;
+}
