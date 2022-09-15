@@ -1,0 +1,96 @@
+<script language="javascript">
+//array of object
+let m1 = {nama:"Budi", nilai:75};
+let m2 = {nama:"Bedu", nilai:55};
+let m3 = {nama:"Dedi", nilai:95};
+let m4 = {nama:"Dudi", nilai:88};
+let m5 = {nama:"Deden", nilai:25};
+let m6 = {nama:"Desi", nilai:65};
+
+let mahasiswa = [m1, m2, m3, m4, m5, m6];
+/*
+for(m of mahasiswa) {
+    let ket = ( m.nilai >= 60) ? "Lulus" : "Gagal";
+    document.write(`<br/>Nama : ${m.nama} - Nilai : ${m.nilai} - Keterangan : ${ket}`);
+}
+*/
+</script>
+<br><h2 align="center">DATA PEGAWAI</h2><br>
+		<table align="center" border="2" cellpadding="15" cellspacing="3" width="100%">
+			<thead>
+				<tr bgcolor="salmon">
+					<th>NO</th>
+                    <th>NAMA</th>
+                    <th>JABATAN</th>
+                    <th>AGAMA</th>
+                    <th>GAJI POKOK</th>
+                    <th>TUNJANGAN JABATAN</th>
+                    <th>TUNJANGAN KESEHATAN</th>
+                    <th>GAJI KOTOR</th>
+                    <th>ZAKAT PROFESI</th>
+                    <th>TAKE HOME PAY</th>
+				</tr>
+			</thead>
+			<tbody>
+                <script language="javascript">
+                    let jabatan = "Manager";
+                    let gapok = 0;
+
+                // perulangan dan kondisi untuk pegawai
+                for (let pegawai = 1; pegawai <= 100; pegawai++) {
+                    if (pegawai == 1 && pegawai <= 25) {
+                        jabatan = "Manager"
+                    }
+                    else if (pegawai == 26 && pegawai <= 50) {
+                        jabatan = "Asisten Manager"
+                    } else if (pegawai == 51 && pegawai <= 75) {
+                        jabatan = "Supervisor"
+                    } else if (pegawai == 76 && pegawai <= 100) {
+                        jabatan = "Staff"
+                    }
+
+                    // switch case untuk gaji pokok dari jabatan
+                    switch (jabatan) {
+                        case "Manager": gapok = 15000000; break;
+                        case "Asisten Manager": gapok = 10000000; break;
+                        case "Supervisor": gapok = 7000000; break;
+                        case "Staff": gapok = 4000000; break;
+                        default: gapok; break;
+                    }
+
+                    // 
+                    let tunjanganJabatan = gapok * 0.2;
+                    let tunjanganKesehatan = gapok * 0.1;
+                    let gajiKotor = gapok + tunjanganJabatan + tunjanganKesehatan;
+
+                    let agama = "Muslim";
+                    pegawai % 2 == 1 ? agama : agama = "Non Muslim";
+                    const warna = agama === "Muslim" ? "yellow" : "#A9E2F5";
+
+
+                    let zakatProfesi = 0;
+                    if (agama === "Muslim" && gajiKotor >= 7000000) zakatProfesi = gajiKotor * 0.025;
+                    else zakatProfesi;
+
+
+                    const takeHomePay = gajiKotor - zakatProfesi;
+
+                    // print
+                    document.write(`
+                        <tr bgcolor=${warna}>
+                            <td class="text-center">${pegawai}</td>
+                            <td>Pegawai${pegawai}</td>
+                            <td>${jabatan}</td>
+                            <td>${agama}</td>
+                            <td class="text-end">Rp.${gapok}</td>
+                            <td class="text-end">Rp.${tunjanganJabatan}</td>
+                            <td class="text-end">Rp.${tunjanganKesehatan}</td>
+                            <td class="text-end">Rp.${gajiKotor}</td>
+                            <td class="text-end">Rp.${zakatProfesi}</td>
+                            <td class="text-end">Rp.${takeHomePay}</td>
+                        </tr>
+                    `)
+                }
+                </script>
+			</tbody>
+		</table>
