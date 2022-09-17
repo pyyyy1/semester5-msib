@@ -1,40 +1,63 @@
-<script language="javascript">
-//array of object
-let m1 = {nama:"Budi", nilai:75};
-let m2 = {nama:"Bedu", nilai:55};
-let m3 = {nama:"Dedi", nilai:95};
-let m4 = {nama:"Dudi", nilai:88};
-let m5 = {nama:"Deden", nilai:25};
-let m6 = {nama:"Desi", nilai:65};
+<!-- Diketahui ada 100 orang pegawai dengan nama Pegawai1 s/d Pegawai100:
+Gunakan If multikondisi untuk menentukan jabatan:
+- Pegawai1 s/d Pegawai25 jabatan manager, gapok 15jt
+- Pegawai26 s/d Pegawai50 jabatan asisten manager, gapok 10jt
+- Pegawai51 s/d Pegawai75 jabatan supervisor, gapok 7jt
+- Pegawai76 s/d Pegawai100 jabatan staff, gapok 4jt
+Untuk Gapok gunakan switch case
 
-let mahasiswa = [m1, m2, m3, m4, m5, m6];
-/*
-for(m of mahasiswa) {
-    let ket = ( m.nilai >= 60) ? "Lulus" : "Gagal";
-    document.write(`<br/>Nama : ${m.nama} - Nilai : ${m.nilai} - Keterangan : ${ket}`);
-}
-*/
-</script>
-<br><h2 align="center">DATA PEGAWAI</h2><br>
-		<table align="center" border="2" cellpadding="15" cellspacing="3" width="100%">
-			<thead>
-				<tr bgcolor="salmon">
-					<th>NO</th>
-                    <th>NAMA</th>
-                    <th>JABATAN</th>
-                    <th>AGAMA</th>
-                    <th>GAJI POKOK</th>
-                    <th>TUNJANGAN JABATAN</th>
-                    <th>TUNJANGAN KESEHATAN</th>
-                    <th>GAJI KOTOR</th>
-                    <th>ZAKAT PROFESI</th>
-                    <th>TAKE HOME PAY</th>
-				</tr>
-			</thead>
-			<tbody>
-                <script language="javascript">
-                    let jabatan = "Manager";
-                    let gapok = 0;
+Dari Gapok Tentukan:
+- Tunjangan Jabatan = 20 % dari gapok
+- Tunjangan Kesehatan = 10 % dari gapok
+- Gaji Kotor = Gapok + Tunjab + Tunkes
+
+Gunakan ternary untuk menentukan agama Muslim dan Non Muslim
+baris ganjil Muslim , warna barisnya yellow
+baris genap Non Muslim , warna barisnya biru
+jika pegawai muslim dan gaji kotornya minimal 7jt, ada zakat profesi sebesar 2,5% dari gaji kotornya
+
+Take Home Pay = Gaji Kotor - Zakat Profesi
+
+
+Tugas:
+Cetak Data Pegawai dan data terkait berbentuk tabel:
+
+Format pengumpulan tugas:
+Disimpan di githubnya masing2: -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas2_jsHtml_zhafiaRabbaniAmalia_ahmadFathanSyakir</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>NO</th>
+                <th>NAMA</th>
+                <th>JABATAN</th>
+                <th>AGAMA</th>
+                <th>GAJI POKOK</th>
+                <th>TUNJANGAN JABATAN</th>
+                <th>TUNJANGAN KESEHATAN</th>
+                <th>GAJI KOTOR</th>
+                <th>ZAKAT PROFESI</th>
+                <th>TAKE HOME PAY</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <script>
+                // Inisiasi/Deklarasi jabatan dan gaji pokok
+                let jabatan = "Manager";
+                let gapok = 0;
 
                 // perulangan dan kondisi untuk pegawai
                 for (let pegawai = 1; pegawai <= 100; pegawai++) {
@@ -65,7 +88,7 @@ for(m of mahasiswa) {
 
                     let agama = "Muslim";
                     pegawai % 2 == 1 ? agama : agama = "Non Muslim";
-                    const warna = agama === "Muslim" ? "yellow" : "#A9E2F5";
+                    const warna = agama === "Muslim" ? "yellow" : "##6CB4EE";
 
 
                     let zakatProfesi = 0;
@@ -91,6 +114,8 @@ for(m of mahasiswa) {
                         </tr>
                     `)
                 }
-                </script>
-			</tbody>
-		</table>
+            </script>
+        </tbody>
+</body>
+
+</html>
